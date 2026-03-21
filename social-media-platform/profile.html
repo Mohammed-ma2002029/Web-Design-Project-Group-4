@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - SocialApp</title>
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <nav class="navbar">
-        <h1>SocialApp</h1>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="profile.html">Profile</a>
-            <a href="login.html">Logout</a>
+
+<body onload="checkAuth(); loadProfile();">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">SocialMedia</div>
+
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="profile.html" onclick="clearViewUser()">👤 Profile</a>
+      <a href="#" onclick="logout()">🚪 Logout</a>
+    </div>
+  </nav>
+
+  <div class="main-container">
+
+    <!-- PROFILE CARD -->
+    <div class="profile-card">
+
+      <div class="profile-header">
+        <div class="profile-avatar" id="avatar">MO</div>
+
+        <div>
+          <h2 id="usernameDisplay"></h2>
+          <p id="handle"></p>
+          <p id="bioText" class="bio"></p>
+
+            <textarea id="bioInput" style="display:none;"></textarea>
+            <button onclick="editBio()" id="editBtn">Edit Bio</button>
+            <button onclick="saveBio()" id="saveBtn" style="display:none;">Save</button>
+          <div id="followBtnContainer"></div>
+          <div class="profile-stats">
+              <span id="postCount">0</span> Posts |
+              <span id="followerCount">0</span> Followers |
+              <span id="followingCount">0</span> Following |
+              <span id="likeCount">0</span> Likes
+          </div>
+
+<div id="followBtnContainer"></div>
         </div>
-    </nav>
-    <main class="container">
-    <section class="profile-card">
-            <img src="assets/images/default-profile.png" alt="Profile Picture" id="profileImage" width="120">
-            <h2 id="profileUsername">Username</h2>
-            <p id="profileBio">This is the user bio</p>
-            <button id="editProfileBtn">Edit Profile</button>
-            <section class="user-posts">
-            <h2>User Posts</h2>
-            <div id="userPostsContainer">
-                <!-- User posts will appear here -->
-            </div>
-        </section>
-       </section>
-    </main>
-    <script src="js/app.js"></script> 
+      </div>
+
+    </div>
+
+    <!-- POSTS -->
+    <h3>My Posts</h3>
+    <div id="posts"></div>
+
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
