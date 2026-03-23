@@ -361,5 +361,5 @@ textarea:focus {
 .post-btn,
 .btn,
 .comment-box button  {
-  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.18);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.18);
 }
