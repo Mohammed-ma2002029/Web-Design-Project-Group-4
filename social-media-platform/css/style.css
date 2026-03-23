@@ -4,14 +4,14 @@
 body {
   font-family: Arial, sans-serif;
   background: #f3f4f6;
-  color: #181f2a;
+  color: #111827;
   margin: 0;
 }
 
 .Auth {
   display: flex;
+  min-height: 100vh;
   align-items: center;
-  min-height: 105vh;
   justify-content: center;
 }
 
@@ -34,8 +34,8 @@ body {
 /* Titles */
 .auth-card h2 {
   margin-bottom: 9px;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .subtitle {
@@ -92,12 +92,15 @@ h2, h3 {
 /* Links */
 .auth-link {
   margin-top: 15px;
+  color: #333b49;
+  text-align: center;
   font-size: 14px;
 }
 
 .auth-link a {
   color: #2563eb;
   text-decoration: none;
+  font-weight: 500;
 }
 /* NAVBAR */
 .navbar {
@@ -109,6 +112,7 @@ h2, h3 {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   align-items: center;
+  
 }
 
 .logo {
@@ -130,7 +134,7 @@ h2, h3 {
   color: #374151;
 }
 .nav-links a:hover {
-  color: #2e6df7;
+  color: #2563eb;
 }
 
 /* MAIN */
@@ -161,7 +165,7 @@ textarea {
   outline: none;
 }
 textarea:focus {
-  border-color: #165cf3;
+  border-color: #2563eb;
 }
 
 .post-btn {
@@ -174,6 +178,7 @@ textarea:focus {
   background: white;
   padding: 15px;
   border-radius: 11px;
+  color: #111827;
   margin-top: 15px;
   border: 1px solid #dce1e5;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -214,6 +219,7 @@ textarea:focus {
 .like-btn.liked {
   background: #fecaca;
   color: red;
+  
 }
 /* PROFILE */
 .profile-card {
@@ -343,4 +349,17 @@ textarea:focus {
 .like-btn:hover,
 .delete-btn:hover {
   opacity: 0.8;
+}
+.follow-btn,
+.post-btn,
+.btn,
+.comment-box button {
+  transition: 0.3s ease;
+}
+
+.follow-btn,
+.post-btn,
+.btn,
+.comment-box button  {
+  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.18);
 }
