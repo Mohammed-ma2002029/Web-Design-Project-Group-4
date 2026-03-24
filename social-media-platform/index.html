@@ -11,7 +11,9 @@
   <nav class="navbar">
     <div class="logo">SocialMedia</div>
 
+    
     <div class="nav-links">
+      
       <a href="index.html">🏠 Home</a>
       <a href="profile.html" onclick="clearViewUser()">👤 Profile</a>
       <a href="#" onclick="logout()">🚪 Logout</a>
@@ -19,7 +21,7 @@
   </nav>
 
   <div class="main-container">
-
+    
     <div class="card">
       <h3>Create a Post</h3>
       <textarea id="postContent" placeholder="What's on your mind?"></textarea>
@@ -28,11 +30,15 @@
 
     <!--  KEEP YOUR TITLE -->
     <h3>Posts</h3>
-
+      
     <!-- 🔥 ADD TABS UNDER TITLE -->
     <div class="feed-tabs">
       <button onclick="switchFeed('recent')" id="recentTab">Recent</button>
       <button onclick="switchFeed('following')" id="followingTab">Following</button>
+          <div class="search-box">
+          <input id="searchInput" placeholder="Search username..." autocomplete="off">
+          <button onclick="searchUser()">Search</button>
+          </div>
     </div>
 
     <!-- POSTS -->

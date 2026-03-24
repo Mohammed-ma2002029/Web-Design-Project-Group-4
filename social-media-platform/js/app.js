@@ -207,6 +207,31 @@ function toggleFollow(usernameToFollow) {
 
   loadProfile();
 }
+//SEARCH USER
+function searchUser() {
+  const input = document.getElementById("searchInput");
+  const query = input.value.trim().toLowerCase();
+
+  if (!query) {
+    alert("Enter a username");
+    return;
+  }
+
+  const users = getUsers();
+
+  const found = users.find(u =>
+    u.username && u.username.toLowerCase() === query
+  );
+
+  if (!found) {
+    alert("User not found");
+    return;
+  }
+
+  // 🔥 NAVIGATION TO PROFILE
+  localStorage.setItem("viewUser", found.username);
+  window.location.href = "profile.html";
+}
 // LOAD POSTS (HOME)
 function loadPosts() {
   const container = document.getElementById("posts");
@@ -466,7 +491,7 @@ function loadProfile() {
   } else {
     followContainer.innerHTML = "";
   }
-
+  
   // POSTS DISPLAY
   const container = document.getElementById("posts");
 
