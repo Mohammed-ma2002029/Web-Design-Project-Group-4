@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,44 +21,47 @@
     </div>
   </nav>
 
-  <div class="main-container">
+  <main class="main-container">
 
     <!-- PROFILE CARD -->
-<div class="profile-card">
+    <section class="profile-card" aria-labelledby="profile-heading">
 
-  <div class="profile-header">
-    <div class="profile-avatar" id="avatar">MO</div>
+      <header class="profile-header">
+        <div class="profile-avatar" id="avatar">MO</div>
 
-    <div>
-      <h2 id="usernameDisplay"></h2>
-      <p id="handle"></p>
+        <div>
+          <h2 id="usernameDisplay"></h2>
+          <p id="handle"></p>
 
-      <p id="bioText" class="bio"></p>
+          <p id="bioText" class="bio"></p>
 
-      <textarea id="bioInput" style="display:none;"></textarea>
-      <button onclick="editBio()" id="editBtn">Edit Bio</button>
-      <button onclick="saveBio()" id="saveBtn" style="display:none;">Save</button>
+          <textarea id="bioInput" style="display:none;"></textarea>
+          <button onclick="editBio()" id="editBtn">Edit Bio</button>
+          <button onclick="saveBio()" id="saveBtn" style="display:none;">Save</button>
 
-      <!-- ✅ ONLY ONE FOLLOW CONTAINER -->
-      <div id="followBtnContainer"></div>
+          <!-- ✅ ONLY ONE FOLLOW CONTAINER -->
+          <div id="followBtnContainer"></div>
 
-      <div class="profile-stats">
-        <span id="postCount">0</span> Posts |
-        <span id="followerCount">0</span> Followers |
-        <span id="followingCount">0</span> Following |
-        <span id="likeCount">0</span> Likes
-      </div>
+          <section class="profile-stats" aria-label="Profile statistics">
+            <span id="postCount">0</span> Posts |
+            <span id="followerCount">0</span> Followers |
+            <span id="followingCount">0</span> Following |
+            <span id="likeCount">0</span> Likes
+          </section>
+        </div>
+      </header>
 
-    </div>
-  </div>
+    </section>
 
-</div>
-    <!-- POSTs -->
-    <h3>My Posts</h3>
-    <div id="posts"></div>
+    <section aria-labelledby="profile-posts-heading">
+      <!-- POSTs -->
+      <h3 id="profile-posts-heading">My Posts</h3>
+      <section id="posts" aria-label="User posts"></section>
+    </section>
 
-  </div>
+  </main>
 
   <script src="js/app.js"></script>
 </body>
+
 </html>

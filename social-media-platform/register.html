@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="Auth">
-  <div class="auth-card">
-    <h2>Create Account</h2>
-    <p class="subtitle">Join our social media platform</p>
+  <main>
+    <section class="auth-card" aria-labelledby="register-heading">
 
-    <form onsubmit="register(event)">
-      
-      <div class="input-group">
-        <label>Full Name</label>
-        <input id="fullname" placeholder="Enter your full name" required>
-      </div>
+      <header>
+        <h2 id="register-heading">Create Account</h2>
+        <p class="subtitle">Join our social media platform</p>
+      </header>
 
-      <div class="input-group">
-        <label>Username</label>
-        <input id="username" placeholder="Choose a username" required>
-      </div>
+      <form onsubmit="register(event)">
 
-      <div class="input-group">
-        <label>Password</label>
-        <input id="password" type="password" placeholder="Choose a password" required>
-      </div>
+        <div class="input-group">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" placeholder="Enter your full name" required>
+        </div>
 
-      <button class="btn">Register</button>
-    </form>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input id="username" placeholder="Choose a username" required>
+        </div>
 
-    <div class="auth-link">
-      Already have an account? <a href="login.html">Login here</a>
-    </div>
-  </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Choose a password" required>
+        </div>
+
+        <button class="btn">Register</button>
+      </form>
+
+      <p class="auth-link">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
+
+    </section>
+  </main>
 
   <script src="js/app.js"></script>
 </body>
+
 </html>
 <!--html-->
