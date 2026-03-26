@@ -363,3 +363,33 @@ textarea:focus {
 .comment-box button  {
   box-shadow: 0 6px 15px rgba(59, 130, 246, 0.18);
 }
+/*جديد*/
+
+@media (max-width: 768px) {
+  
+  body {
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .feed-tabs,
+  .nav-links,
+  .profile-header,
+  .comment-box,
+  .navbar
+   {
+    flex-wrap: wrap;
+   }
+  .profile-stats {
+    line-height: 1.9;
+  }
+   .search-box {
+    margin-top: 9px;
+   }
+  .search-box input {
+    max-width: 100%;
+  }
+ 
+}
