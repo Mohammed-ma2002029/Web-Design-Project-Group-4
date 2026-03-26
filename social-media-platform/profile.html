@@ -10,7 +10,6 @@
 
 <body onload="checkAuth(); loadProfile();">
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Linkora</div>
 
@@ -23,7 +22,6 @@
 
   <main class="main-container">
 
-    <!-- PROFILE CARD -->
     <section class="profile-card" aria-labelledby="profile-heading">
 
       <header class="profile-header">
@@ -39,7 +37,6 @@
           <button onclick="editBio()" id="editBtn">Edit Bio</button>
           <button onclick="saveBio()" id="saveBtn" style="display:none;">Save</button>
 
-          <!-- ✅ ONLY ONE FOLLOW CONTAINER -->
           <div id="followBtnContainer"></div>
 
           <section class="profile-stats" aria-label="Profile statistics">
@@ -54,7 +51,6 @@
     </section>
 
     <section aria-labelledby="profile-posts-heading">
-      <!-- POSTs -->
       <h3 id="profile-posts-heading">My Posts</h3>
       <section id="posts" aria-label="User posts"></section>
     </section>

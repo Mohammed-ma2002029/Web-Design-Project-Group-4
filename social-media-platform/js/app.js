@@ -31,7 +31,7 @@ function logout() {
   window.location.href = "login.html";
 }
 
-// CLEAR viewed user (IMPORTANT)
+// CLEAR viewed user 
 function clearViewUser() {
   localStorage.removeItem("viewUser");
 }
@@ -103,7 +103,7 @@ function createPost() {
     user: user.username,
     content: content,
     likes: [],
-    comments: [], // 🔥 NEW
+    comments: [], 
     timestamp: new Date().toISOString()
   });
 
@@ -228,7 +228,6 @@ function searchUser() {
     return;
   }
 
-  // 🔥 NAVIGATION TO PROFILE
   localStorage.setItem("viewUser", found.username);
   window.location.href = "profile.html";
 }
@@ -281,12 +280,10 @@ if (currentFeed === "following") {
           ${liked ? '💔 Unlike' : '❤️ Like'} (${p.likes.length})
         </button>
 
-        <!-- COMMENT BUTTON -->
         <button class="comment-toggle-btn" onclick="toggleComments(${p.id})">
           💬 Comments (${p.comments.length})
         </button>
 
-        <!-- COMMENTS SECTION (HIDDEN) -->
         <div id="comments-${p.id}" class="comments-section" style="display:none;">
 
           <div class="comments">
@@ -357,7 +354,7 @@ function editBio() {
   const currentUser = getCurrentUser();
   const viewUser = localStorage.getItem("viewUser");
 
-  // 🔥 prevent editing other users
+  //prevent editing other users
   if (viewUser && viewUser !== currentUser.username) return;
 
   document.getElementById("bioInput").style.display = "block";
@@ -375,7 +372,7 @@ function saveBio() {
   const currentUser = getCurrentUser();
   const viewUser = localStorage.getItem("viewUser");
 
-  // 🔥 prevent editing other users
+  //prevent editing other users
   if (viewUser && viewUser !== currentUser.username) return;
 
   if (!currentUser) return;
@@ -461,7 +458,7 @@ function loadProfile() {
   document.getElementById("bioText").innerText =
     user.bio || "Hey there! I am using Social Media.";
 
-  // 🔥 EDIT BIO CONTROL (FIXED)
+  //EDIT BIO CONTROL 
   const editBtn = document.getElementById("editBtn");
   const bioInput = document.getElementById("bioInput");
   const saveBtn = document.getElementById("saveBtn");
